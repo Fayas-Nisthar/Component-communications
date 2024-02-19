@@ -1,0 +1,9 @@
+<div class="container mt-5">
+    <input type="text" [(ngModel)]="text1">
+    <button (click)="sendToChild()">Parent Button</button>
+    {{data2}}
+
+    <div class="mt-5">
+        <app-child1 [context]="data1" (context2)="receiveFromChild($event)"></app-child1>
+    </div>
+</div>

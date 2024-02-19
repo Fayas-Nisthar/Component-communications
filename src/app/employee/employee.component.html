@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-3" *ngFor="let emp of employees">
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              {{emp.name}}
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{emp.username}}</li>
+              <li class="list-group-item">{{emp.phone}}</li>
+              <li class="list-group-item">{{emp.address.city}}</li>
+            </ul>
+          </div>
+    </div>
+</div>
