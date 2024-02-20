@@ -1,1 +1,12 @@
-<p>employee-detail works!</p>
+<div class="card m-5" style="width: 18rem;">
+    <div class="card-header">
+      {{employeeData.name}}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">company: {{employeeData.company.name}}</li>
+      <li class="list-group-item">phone: {{employeeData.phone}}</li>
+      <li class="list-group-item">city: {{employeeData.address.city}}</li>
+      <li class="list-group-item">zipcode: {{employeeData.address.zipcode}}</li>
+
+    </ul>
+  </div>

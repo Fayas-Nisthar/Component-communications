@@ -8,6 +8,8 @@
               <li class="list-group-item">{{emp.username}}</li>
               <li class="list-group-item">{{emp.phone}}</li>
               <li class="list-group-item">{{emp.address.city}}</li>
+              <li class="list-group-item"><a href="" [routerLink]="['employees/',emp.id]">Details</a></li>
+
             </ul>
           </div>
     </div>
