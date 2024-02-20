@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-employee-detail',
@@ -10,8 +11,8 @@ import { HttpClient } from '@angular/common/http';
 export class EmployeeDetailComponent {
   id:any
   employeeData:any
-  constructor(private route:ActivatedRoute, private http:HttpClient){
+  constructor(private route:ActivatedRoute, private service:UserService){
     this.id=this.route.snapshot.params["pk"]
-    this.http.get(`https://jsonplaceholder.typicode.com/users/${this.id}`).subscribe(data=>this.employeeData=data)
+    this.service.retrieveEmployeeData(this.id).subscribe(data=>this.employeeData=data)
   }
 }

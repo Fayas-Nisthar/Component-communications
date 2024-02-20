@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-employee',
@@ -9,8 +10,7 @@ import {HttpClient} from '@angular/common/http'
 export class EmployeeComponent {
   employees:any
 
-  constructor(private http:HttpClient){
-    this.http.get("https://jsonplaceholder.typicode.com/users/").subscribe(data=>this.employees=data)
-
+  constructor(private service:UserService){
+    this.service.getEmployees().subscribe(data=>this.employees=data)
   }
 }
